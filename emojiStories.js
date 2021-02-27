@@ -8,15 +8,18 @@
 const storyLength = document.querySelector("#story-length-input"); //points to user input
 const emojiStory = document.querySelector("#emoji-story");
 const storyButton = document.querySelector("#generate-story-btn");
+let emojiStr = ""
 
 const generateEmoji = () => {
   // question why userInput variable needs to be in function
   const numInput = Number(storyLength.value); //user input(input tag has value property which is a string)
   for (let i = 0; i < numInput; i++) {
     const randomIdx = Math.floor(Math.random() * emojis.length - 1);
-    emojiStory.innerText += emojis[randomIdx]; //Be sure not to reassign (=), make sure to use +=
+    emojiStr += emojis[randomIdx]; //Be sure not to reassign (=), make sure to use +=
   }
+  emojiStory.innerText += emojiStr
 };
+
 
 storyButton.addEventListener("click", (event) => {
   event.preventDefault();
@@ -26,11 +29,13 @@ storyButton.addEventListener("click", (event) => {
 const storyInput = document.querySelector("#description-input");
 const descriptionButton = document.querySelector("#submit-description-btn");
 const ul = document.querySelector("ul")
+
+
 const createStory = () => {
-  const storyString = storyInput.value;
-  const li = document.createElement("li");
-  li.textContent = storyString;
-  ul.appendChild(li);
+    let storyString = storyInput.value;
+    const li = document.createElement("li");
+    li.textContent = `${emojiStr} ${storyString}`;
+    ul.appendChild(li);
 };
 
 descriptionButton.addEventListener("click", (event) => {
