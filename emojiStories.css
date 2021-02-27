@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+    /* display: flex; */
+    align-items: column;
+    color: white;
+}
+
+/* h1 {
+}
+
+p {
+ 
+    color: white;
+}
+
+label {
+    display: flex;
+    color: white;
+}
+
+h2 {
+    color: white;
+} */
