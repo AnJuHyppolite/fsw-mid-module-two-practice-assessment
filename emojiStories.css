@@ -1,8 +1,8 @@
 body {
-    background-color: black;
+    background-color: goldenrod;
     /* display: flex; */
     align-items: column;
-    color: white;
+    color: black;
 }
 
 #section-one {
@@ -20,3 +20,14 @@ body {
     height: fit-content;
 }
 
+button {
+    margin: 2px;
+}
+
+form {
+    font-weight: bold;
+}
+
+p {
+    font-weight: bold;
+}
